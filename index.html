@@ -346,15 +346,15 @@
              { name: "Attack Shard", price: 19999, category: 'misc' },
              { name: "Armored Shard", price: 24999, category: 'misc' },
              { name: "Emperor Key", price: 2999, category: 'misc' },
-             { name: "2X XP Boost [30 Min]", price: 4499, category: 'boosts' },
-             { name: "2X XP Boost [1 Hour]", price: 7999, category: 'boosts' },
-             { name: "2X XP Boost [2 Hours]", price: 13999, category: 'boosts' },
-             { name: "2X Luck Boost [30 Min]", price: 4499, category: 'boosts' },
-             { name: "2X Luck Boost [1 Hour]", price: 7999, category: 'boosts' },
-             { name: "2X Luck Boost [2 Hours]", price: 13999, category: 'boosts' },
-             { name: "2X Gold Boost [30 Min]", price: 4499, category: 'boosts' },
-             { name: "2X Gold Boost [1 Hour]", price: 7999, category: 'boosts' },
-             { name: "2X Gold Boost [2 Hours]", price: 13999, category: 'boosts' },
+             { name: "2x XP Boost [30m]", price: 4499, category: 'boosts' },
+             { name: "2x XP Boost [1h]", price: 7999, category: 'boosts' },
+             { name: "2x XP Boost [2h]", price: 13999, category: 'boosts' },
+             { name: "2x Luck Boost [30m]", price: 4499, category: 'boosts' },
+             { name: "2x Luck Boost [1h]", price: 7999, category: 'boosts' },
+             { name: "2x Luck Boost [2h]", price: 13999, category: 'boosts' },
+             { name: "2x Gold Boost [30m]", price: 4499, category: 'boosts' },
+             { name: "2x Gold Boost [1h]", price: 7999, category: 'boosts' },
+             { name: "2x Gold Boost [2h]", price: 13999, category: 'boosts' },
              { name: "5 Spins", price: 500, category: 'spins' },
              { name: "25 Spins", price: 2500, category: 'spins' },
              { name: "100 Spins", price: 10000, category: 'spins' },
@@ -468,9 +468,9 @@
              }   
 
              function generatebasketlink() {
-            const encodedBasket = encodeURIComponent(JSON.stringify(checkoutdata));
-            const shareableLink = `${window.location.origin}${window.location.pathname}?basket=${encodedBasket}`;
-            navigator.clipboard.writeText(shareableLink).then(() => {
+            const encodedbasket = encodeURIComponent(JSON.stringify(checkoutdata));
+            const shareablelink = `${window.location.origin}${window.location.pathname}?basket=${encodedbasket}`;
+            navigator.clipboard.writeText(shareablelink).then(() => {
                 alert("Basket link copied to clipboard!");
             });
             }
